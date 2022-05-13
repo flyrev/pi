@@ -31,7 +31,7 @@ echo 'export PATH=${HOME}/gn:"$PATH"' >> ${HOME}/.bashrc
 source ${HOME}/.bashrc
 
 # Kitware
-wget https://apt.kitware.com/kitware-archive.sh
+wget -c https://apt.kitware.com/kitware-archive.sh
 sudo bash kitware-archive.sh
 sudo apt install --no-install-recommends git cmake ninja-build gperf \
   ccache dfu-util device-tree-compiler wget \
