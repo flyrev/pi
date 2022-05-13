@@ -15,15 +15,18 @@ sudo apt -yqq autoremove
 
 sudo dpkg -i *.deb
 
-sudo apt -yqq install git
-
-pip3 uninstall west
-pip3 install west==0.12
-
 # nRF Connect Tools
 export NRF_CONNECT_TOOLS_VERSION=10.15.4
 wget -P /tmp -c https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-15-4/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}_arm64.deb
 sudo dpkg -i /tmp/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}_arm64.deb
+
+sudo mkdir -p /opt/gnuarmemb
+sudo tar xvf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 -C /opt/gnuarmemb/
+
+sudo apt -yqq install git
+
+pip3 uninstall west
+pip3 install west==0.12
 
 # GN
 mkdir ${HOME}/gn
