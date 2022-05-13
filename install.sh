@@ -20,9 +20,9 @@ pip install --user --upgrade pip
 pip install --user --upgrade west
 
 # nRF Connect Tools
-export NRF_CONNECT_TOOLS_VERSION=10.15.3
-wget -P /tmp -c https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-15-4/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}.deb
-sudo dpkg -i /tmp/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}.deb
+export NRF_CONNECT_TOOLS_VERSION=10.15.4
+wget -P /tmp -c https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-15-4/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}_arm64.deb
+sudo dpkg -i /tmp/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}_arm64.deb
 
 # nRF Connect SDK
 export NRF_SDK_VERSION=v1.9.1
