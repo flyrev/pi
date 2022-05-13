@@ -6,12 +6,14 @@
 # curl -o- https://raw.githubusercontent.com/flyrev/pi/main/install.sh | bash
 
 # Delete what we do not need
-sudo apt-get remove -yqq --purge libreoffice*
-sudo apt-get clean
-sudo apt-get autoremove
+sudo apt remove -yqq --purge libreoffice*
+sudo apt -yqq clean
+sudo apt -yqq autoremove
 
 # Run update and upgrade if we haven't done that in a while
 [ -z "$(find -H /var/lib/apt/lists -maxdepth 0 -mtime -7)" ] && sudo apt update && sudo apt -yqq upgrade && sudo apt -yqq dist-upgrade && sudo apt -yqq autoremove
+
+sudo apt install -yqq git
 
 # pip
 pip install --upgrade pip
