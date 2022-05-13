@@ -14,10 +14,10 @@ sudo apt-get autoremove
 [ -z "$(find -H /var/lib/apt/lists -maxdepth 0 -mtime -7)" ] && sudo apt update && sudo apt -yqq upgrade && sudo apt -yqq dist-upgrade && sudo apt -yqq autoremove
 
 # pip
-pip install --user --upgrade pip
+pip install --upgrade pip
 
 # west
-pip install --user --upgrade west
+pip install --upgrade west
 
 # nRF Connect Tools
 export NRF_CONNECT_TOOLS_VERSION=10.15.4
