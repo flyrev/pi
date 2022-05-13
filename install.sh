@@ -14,6 +14,7 @@ sudo apt -yqq autoremove
 [ -z "$(find -H /var/lib/apt/lists -maxdepth 0 -mtime -7)" ] && sudo apt update && sudo apt -yqq upgrade && sudo apt -yqq dist-upgrade && sudo apt -yqq autoremove
 
 sudo dpkg -i *.deb
+sudo apt install -yqq screen minicom
 
 # nRF Connect Tools
 export NRF_CONNECT_TOOLS_VERSION=10.15.4
@@ -62,8 +63,5 @@ pip3 install -r zephyr/scripts/requirements.txt
 pip3 install -r nrf/scripts/requirements.txt
 pip3 install -r bootloader/mcuboot/scripts/requirements.txt
 cd -
-
-# Utilities
-sudo apt -yqq install screen minicom
 
 } # ensure entire script is downloaded #
