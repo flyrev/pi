@@ -15,12 +15,6 @@ sudo apt -yqq autoremove
 
 sudo apt -yqq install git
 
-# pip
-pip install --upgrade pip
-
-# west
-pip install west==0.12.0
-
 # nRF Connect Tools
 export NRF_CONNECT_TOOLS_VERSION=10.15.4
 wget -P /tmp -c https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-15-4/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}_arm64.deb
@@ -50,7 +44,7 @@ cd ~/ncs
 python3 -m venv env
 . env/bin/activate
 pip install --upgrade pip
-pip install --upgrade west
+pip install west==0.12.0
 west init -m https://github.com/nrfconnect/sdk-nrf --mr ${NRF_SDK_VERSION}
 west update
 west zephyr-export
