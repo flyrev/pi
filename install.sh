@@ -13,6 +13,12 @@ sudo apt-get autoremove
 # Run update and upgrade if we haven't done that in a while
 [ -z "$(find -H /var/lib/apt/lists -maxdepth 0 -mtime -7)" ] && sudo apt update && sudo apt -yqq upgrade && sudo apt -yqq dist-upgrade && sudo apt -yqq autoremove
 
+# pip
+pip install --user --upgrade pip
+
+# west
+pip install --user --upgrade west
+
 # nRF Connect Tools
 NRF_CONNECT_TOOLS_VERSION=10.15.3
 wget -P /tmp -c https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-15-4/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}.deb
