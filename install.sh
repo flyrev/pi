@@ -21,8 +21,9 @@ wget -P /tmp -c https://www.nordicsemi.com/-/media/Software-and-other-downloads/
 sudo dpkg -i /tmp/nrf-command-line-tools_${NRF_CONNECT_TOOLS_VERSION}_arm64.deb
 
 # GN
-mkdir ${HOME}/gn && cd ${HOME}/gn
-wget -O gn.zip https://chrome-infra-packages.appspot.com/dl/gn/gn/linux-amd64/+/latest
+mkdir ${HOME}/gn
+cd ${HOME}/gn
+wget -c -O gn.zip https://chrome-infra-packages.appspot.com/dl/gn/gn/linux-amd64/+/latest
 unzip gn.zip
 rm gn.zip
 
