@@ -49,9 +49,9 @@ pip install west==0.12.0
 west init -m https://github.com/nrfconnect/sdk-nrf --mr ${NRF_SDK_VERSION}
 west update
 west zephyr-export
-pip3 install --user -r zephyr/scripts/requirements.txt
-pip3 install --user -r nrf/scripts/requirements.txt
-pip3 install --user -r bootloader/mcuboot/scripts/requirements.txt
+pip3 install -r zephyr/scripts/requirements.txt
+pip3 install -r nrf/scripts/requirements.txt
+pip3 install -r bootloader/mcuboot/scripts/requirements.txt
 cd -
 
 # Utilities
