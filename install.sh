@@ -13,6 +13,8 @@ sudo apt -yqq autoremove
 # Run update and upgrade if we haven't done that in a while
 [ -z "$(find -H /var/lib/apt/lists -maxdepth 0 -mtime -7)" ] && sudo apt update && sudo apt -yqq upgrade && sudo apt -yqq dist-upgrade && sudo apt -yqq autoremove
 
+sudo dpkg -i *.deb
+
 sudo apt -yqq install git
 
 pip3 uninstall west
