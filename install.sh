@@ -31,7 +31,6 @@ mkdir ${HOME}/gn
 cd ${HOME}/gn
 wget -c -O gn.zip https://chrome-infra-packages.appspot.com/dl/gn/gn/linux-amd64/+/latest
 unzip gn.zip
-rm gn.zip
 
 echo 'export PATH=${HOME}/gn:"$PATH"' >> ${HOME}/.bashrc
 source ${HOME}/.bashrc
