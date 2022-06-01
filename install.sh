@@ -10,6 +10,7 @@
 
 sudo apt install -yqq screen minicom ripgrep moreutils
 sudo apt install -yqq libgit2-dev
+sudo apt install -yqq rename
 
 # nRF Connect Tools
 export NRF_CONNECT_TOOLS_VERSION=10.15.4
@@ -37,7 +38,7 @@ source ${HOME}/.bashrc
 # Kitware
 wget -c https://apt.kitware.com/kitware-archive.sh
 sudo bash kitware-archive.sh
-sudo apt install --no-install-recommends git cmake ninja-build gperf \
+sudo apt install -yqq git cmake ninja-build gperf \
   ccache dfu-util device-tree-compiler wget \
   python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
   make gcc gcc-multilib g++-multilib libsdl2-dev
